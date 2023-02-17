@@ -1,0 +1,7 @@
+@model Client.Models.Country
+
+@Model.Name
+<br />
+@foreach (var item in Model.Provices) {
+    @item.Id <span>&nbsp;</span> @item.Name <span>&nbsp;</span> @item.CountryId <br />
+}

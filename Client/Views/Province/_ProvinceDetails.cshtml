@@ -1,0 +1,12 @@
+@model Client.Models.Province
+
+<div class="modal-header">
+    <h1 class="modal-title fs-4" id="modalLabel">@Model.Name</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body overflow-y-auto">
+    <h3 class="display-6 text-center text-danger">@Model.Country.Name</h3>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
