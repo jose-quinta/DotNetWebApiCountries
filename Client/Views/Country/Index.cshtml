@@ -26,7 +26,7 @@
                 @foreach (var item in Model) {
                     <tr>
                         <td>@item.Name</td>
-                        <td style="width: 200px;">
+                        <td>
                             <a asp-controller="Country" asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-primary">Edit</a>
                             <a asp-controller="Country" asp-action="Details" asp-route-Id="@item.Id" class="btn btn-secondary">Details</a>
                             <a asp-controller="Country" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>

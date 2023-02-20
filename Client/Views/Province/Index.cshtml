@@ -28,7 +28,7 @@
                     <tr>
                         <td>@item.Name</td>
                         <td>@item.Country.Name</td>
-                        <td style="width: 200px;">
+                        <td>
                             <a asp-controller="Province" asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-primary">Edit</a>
                             <a asp-controller="Province" asp-action="Details" asp-route-Id="@item.Id" class="btn btn-secondary">Details</a>
                             <a asp-controller="Province" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a>
