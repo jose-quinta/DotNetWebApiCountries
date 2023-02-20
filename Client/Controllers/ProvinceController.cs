@@ -15,7 +15,6 @@ namespace Client.Controllers {
         private readonly HttpClientHandler _httpHandler = new HttpClientHandler();
         private readonly string _url = "https://localhost:7020/api/Province/";
         public ProvinceController() => _httpHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-
         public async Task<ActionResult<List<ProvinceController>>> Index(string? search) {
             var response = new List<Province>();
             using(var _api = await _http.GetAsync(_url)) {
@@ -30,10 +29,7 @@ namespace Client.Controllers {
 
             return View(response);
         }
-        public async Task<ActionResult<Province>> Details(int? id, string type) {
-            if (id == null)
-                return PartialView("_ProvinceCreate");
-
+        public async Task<ActionResult<Province>> Details(int id) {
             var response = new Province();
             using(var _api = await _http.GetAsync(_url + id)) {
                 string _response = await _api.Content.ReadAsStringAsync();
@@ -41,10 +37,11 @@ namespace Client.Controllers {
             }
 
             if (response == null)
-                return RedirectToAction(nameof(Index));
+                return View();
 
-            return PartialView($"_Province{type}", response);
+            return View(response);
         }
+        public ActionResult Create() => View();
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Province>>> Create(Province request) {
@@ -66,6 +63,18 @@ namespace Client.Controllers {
 
             return RedirectToAction(nameof(Index));
         }
+        public async Task<ActionResult<Province>> Edit(int id) {
+            var response = new Province();
+            using (var _api = await _http.GetAsync(_url + id)) {
+                string _response = await _api.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<Province>(_response)!;
+            }
+
+            if (response == null)
+                return View();
+
+            return View(response);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult<Province>> Edit(Province request) {
@@ -84,9 +93,21 @@ namespace Client.Controllers {
 
             return RedirectToAction(nameof(Index));
         }
+        public async Task<ActionResult<Province>> Delete(int id) {
+            var response = new Province();
+            using (var _api = await _http.GetAsync(_url + id)) {
+                string _response = await _api.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<Province>(_response)!;
+            }
+
+            if (response == null)
+                return View();
+
+            return View(response);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult<Province>> Delete(int id) {
+        public async Task<ActionResult<Province>> Delete(int id, Province request) {
             var response = new Province();
             using (var _api = await _http.DeleteAsync(_url + id)) {
                 string _response = await _api.Content.ReadAsStringAsync();

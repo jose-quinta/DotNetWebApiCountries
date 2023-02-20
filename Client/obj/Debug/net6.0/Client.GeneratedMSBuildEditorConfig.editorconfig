@@ -15,24 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\José Quintana\Desktop\api\DotNetWebApiCountries\Client
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/_CountryCreate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxfQ291bnRyeUNyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/_CountryDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxfQ291bnRyeURldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Country/_CountryEdit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxfQ291bnRyeUVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Home/Index.cshtml]
@@ -43,20 +43,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/_ProvinceCreate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcX1Byb3ZpbmNlQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/_ProvinceDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcX1Byb3ZpbmNlRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Province/_ProvinceEdit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2VcX1Byb3ZpbmNlRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/José Quintana/Desktop/api/DotNetWebApiCountries/Client/Views/Shared/Error.cshtml]

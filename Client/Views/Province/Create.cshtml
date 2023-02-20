@@ -1,0 +1,33 @@
+@model Client.Models.Province
+
+<div class="row col-12 col-sm-10 col-md-9 col-lg-8 mx-auto">
+    <form asp-controller="Province" asp-action="Create" method="post">
+        <h1 class="text-center my-3 fs-4">Create New Province</h1>
+        <div class="form-group row mt-1">
+            <div class="col-4">
+                <label asp-for="Name" class="form-label"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="Name" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row mt-1">
+            <div class="col-4">
+                <label asp-for="Country" class="form-label"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="CountryId" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="form-group row col-12 col-sm-10 col-md-9 col-lg-8 mx-auto">
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary form-control">Create Province</button>
+                </div>
+                <div class="col-6">
+                    <a asp-controller="Province" asp-action="Index" class="btn btn-secondary form-control">Return to List</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

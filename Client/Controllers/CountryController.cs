@@ -43,10 +43,7 @@ namespace Client.Controllers {
 
             return Json(new SelectList(response, "Id", "Name"));
         }
-        public async Task<ActionResult<Country>> Details(int? id, string type) {
-            if (id == null)
-                return PartialView("_CountryCreate");
-
+        public async Task<ActionResult<Country>> Details(int id) {
             var response = new Country();
             using(var _api = await _http.GetAsync(_url + id)) {
                 String _response = await _api.Content.ReadAsStringAsync();
@@ -54,10 +51,11 @@ namespace Client.Controllers {
             }
 
             if (response == null)
-                return RedirectToAction(nameof(Index));
+                return View();
 
-            return PartialView($"_Country{type}", response);
+            return View(response);
         }
+        public ActionResult Create() => View();
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult<List<Country>>> Create(Country request) {
@@ -73,10 +71,22 @@ namespace Client.Controllers {
                 response = JsonConvert.DeserializeObject<List<Country>>(_response)!;
             }
 
-            if (response != null)
-                return RedirectToAction(nameof(Index));
+            if (response == null)
+                return View();
 
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<ActionResult<Country>> Edit(int id) {
+            var response = new Country();
+            using (var _api = await _http.GetAsync(_url + id)) {
+                String _response = await _api.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<Country>(_response)!;
+            }
+
+            if (response == null)
+                return View();
+
+            return View(response);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -90,22 +100,34 @@ namespace Client.Controllers {
             StringContent content = new StringContent(JsonConvert.SerializeObject(_request), Encoding.UTF8, "application/json");
             using (var _api = await _http.PutAsync(_url + request.Id , content)) {
                 if (!_api.IsSuccessStatusCode)
-                    return RedirectToAction(nameof(Index));
+                    return View();
             }
 
             return RedirectToAction(nameof(Index));
         }
+        public async Task<ActionResult<Country>> Delete(int id) {
+            var response = new Country();
+            using (var _api = await _http.GetAsync(_url + id)) {
+                String _response = await _api.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<Country>(_response)!;
+            }
+
+            if (response == null)
+                return View();
+
+            return View(response);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult<Country>> Delete(int id) {
+        public async Task<ActionResult<Country>> Delete(int id, Country request) {
             var response = new Country();
             using(var _api = await _http.DeleteAsync(_url + id)) {
                 String _response = await _api.Content.ReadAsStringAsync();
                 response = JsonConvert.DeserializeObject<Country>(_response)!;
             }
 
-            if (response != null)
-                return RedirectToAction(nameof(Index));
+            if (response == null)
+                return View();
 
             return RedirectToAction(nameof(Index));
         }
